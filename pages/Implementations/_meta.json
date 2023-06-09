@@ -1,6 +1,6 @@
-{
-    "c-salt_sanskrit": "C-SALT Sanskrit",
-    "cdsd": "Cologne Digital Sanskrit Dictionaries",
-    "freedict": "Freedict",
-    "kosh_data": "Kosh Data"
-  }
+{    
+  "freedict": "Freedict",
+  "cdsd": "Cologne Digital Sanskrit Dictionaries",
+  "c-salt_sanskrit": "C-SALT Sanskrit",
+  "kosh_data": "Kosh Data"
+}

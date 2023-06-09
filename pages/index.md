@@ -1,27 +1,25 @@
 # Kosh - APIs for Lexical Data
 
 
-Kosh is an open-source framework for creating and maintaining APIs for lexical data
-
+Kosh is an open-source framework designed to create and maintain APIs for lexical data.
 
 
 [View it on GitHub](https://github.com/cceh/kosh)
 ![Hello](/kosh_overview.jpg)
-Kosh has been conceived to provide API access to **any XML-encoded** lexical dataset, independently of the data model employed.
 
-Its name Kosh derives from the Hindi word for dictionary or lexicon, कोश _koś_ or _kosh_, which in turn derives from Sanskrit कोश 
-_kośa_ with the same meaning. 
+Kosh enables API access to **any XML-encoded** lexical dataset, regardless of the employed data model.
+
+The name "Kosh" originates from the Hindi word for dictionary or lexicon, कोश (*koś* or *kosh*), which itself derives from Sanskrit कोश (*kośa*) with the same meaning.
 
 ## Features
 
-
-* Kosh processes lexical data in XML format.
-* Two APIs, GraphQL and REST, access the data stored in elasticsearch.
-* Kosh can be deployed either via Docker or natively on Unix-like systems.
+- Kosh processes lexical data in XML format.
+- Two APIs, GraphQL and REST, provide access to the data stored in Elasticsearch.
+- Kosh can be deployed using Docker or natively on Unix-like systems.
 
 ## How to run Kosh
 
-You can configurate Kosh to create APIs for any XML-encoded lexical resource. Learn how to do it for your own resources in [deployment](/docs/deployment.md)
+You can configure Kosh to create APIs for your XML-encoded lexical resource. Learn how to do it for your own resources in the [deployment guide](deployment.md)
 
 ## References
 

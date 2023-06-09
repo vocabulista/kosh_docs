@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import '../app/globals.css'
+
 
 const FetchJson = ({base_url, collection}) => {
     const [dicts, setDicts] = useState({});
@@ -14,47 +16,55 @@ const FetchJson = ({base_url, collection}) => {
     }, []);
 
     return (
-
-                            <div>
-                                <table style={{borderCollapse: 'collapse', width: '100%'}}>
-                                    <thead>
-                                        <tr>
-                                            <th style={{textAlign: 'left', padding: '10px'}}>Number</th>
-                                            <th style={{textAlign: 'left', padding: '10px'}}>Dictionary</th>
-                                            <th style={{textAlign: 'left', padding: '10px'}}>Size</th>
-                                            <th style={{textAlign: 'left', padding: '10px'}}>GraphQL</th>
-                                            <th style={{textAlign: 'left', padding: '10px'}}>RESTful</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {Object.keys(dicts).map((dictKey, index) => {
-                                            const dict = dicts[dictKey];
-                                            return (
-                                                <React.Fragment key={dictKey}>
-                                                    <tr>
-                                                        <td style={{border: '1px solid black', padding: '10px'}}>{index + 1}</td>
-                                                        <td style={{border: '1px solid black', padding: '10px'}}>{dictKey}</td>
-                                                        <td style={{border: '1px solid black', padding: '10px'}}>{dict.size}</td>
-                                                        <td style={{border: '1px solid black', padding: '10px'}}>
-                                                            {dict.endpoints.graphql &&
-                                                                <span style={{color: 'blue', textDecoration: 'underline', cursor: 'pointer'}} onClick={() => window.open(`${base_url}${dict.endpoints.graphql}`)}>{`${base_url}${dict.endpoints.graphql}`}</span>
-                                                            }
-                                                        </td>
-                                                        <td style={{border: '1px solid black', padding: '10px'}}>
-                                                            {dict.endpoints.graphql &&
-                                                                <span style={{color: 'blue', textDecoration: 'underline', cursor: 'pointer'}} onClick={() => window.open(`${base_url}${dict.endpoints.restful}`)}>{`${base_url}${dict.endpoints.restful}`}</span>
-                                                            }
-                                                        </td>
-                                                    </tr>
-                                                </React.Fragment>
-                                            );
-                                        })}
-                                    </tbody>
-                                </table>
-                            </div>
-
+        <div className="border border-gray-500">
+            
+            <table className="table-auto w-full">
+                <thead>
+                    <tr>
+                        <th className="text-center border border-gray-500 px-4 py-2">Number</th>
+                        <th className="text-center border border-gray-500 px-4 py-2">Dict_ID</th>
+                        <th className="text-center border border-gray-500 px-4 py-2">Entries</th>
+                        <th className="text-center border border-gray-500 px-4 py-2">GraphQL</th>
+                        <th className="text-center border border-gray-500 px-4 py-2">RESTful</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {Object.keys(dicts).map((dictKey, index) => {
+                        const dict = dicts[dictKey];
+                        return (
+                            <React.Fragment key={dictKey}>
+                                <tr>
+                                    <td className="text-center border border-gray-500 px-4 py-2">{index + 1}</td>
+                                    <td className="text-center border border-gray-500 px-4 py-2">{dictKey}</td>
+                                    <td className="text-center border border-gray-500 px-4 py-2">{dict.size}</td>
+                                    <td className="text-center border border-gray-500 px-4 py-2">
+                                        {dict.endpoints.graphql && (
+                                            <span
+                                            className="text-blue-500 underline cursor-pointer"
+                                                onClick={() =>
+                                                    window.open(`${base_url}${dict.endpoints.graphql}`)
+                                                }
+                                            >{`${base_url}${dict.endpoints.graphql}`}</span>
+                                        )}
+                                    </td>
+                                    <td className="border-b border-gray-500 px-4 py-2">
+                                        {dict.endpoints.graphql && (
+                                            <span
+                                            className="text-blue-500 underline cursor-pointer"
+                                                onClick={() =>
+                                                    window.open(`${base_url}${dict.endpoints.restful}`)
+                                                }
+                                            >{`${base_url}${dict.endpoints.restful}`}</span>
+                                        )}
+                                    </td>
+                                </tr>
+                            </React.Fragment>
+                        );
+                    })}
+                </tbody>
+            </table>
+        </div>
     );
-
 }
 export default FetchJson;
 

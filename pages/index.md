@@ -1,15 +1,20 @@
-# Kosh - APIs for Lexical Data
+# Kosh Suite - An API Framework for Lexical Data
 
 
-Kosh is an open-source framework designed to create and maintain APIs for lexical data.
+The Kosh Suite is an API-centric, open-source framework designed to efficiently manage and access lexical data.
 
+![kosh_overview](/kosh_overview.jpg)
 
-[View it on GitHub](https://github.com/cceh/kosh)
-![Hello](/kosh_overview.jpg)
+### Backend
+The framework's backbone, [kosh](https://github.com/cceh/kosh), is designed with the capability to provide API access to any XML-encoded lexical dataset, independently of the underlying data model. 
 
-Kosh enables API access to **any XML-encoded** lexical dataset, regardless of the employed data model.
+### Frontend
+In conjunction with the backend, the frontend, [kosh_client](https://github.com/cceh/kosh), brings you a user-friendly interface, built using React. This web application simplifies the process of searching within the diverse and extensive datasets indexed by Kosh.
+
+### Why *Kosh*?
 
 The name "Kosh" originates from the Hindi word for dictionary or lexicon, कोश (*koś* or *kosh*), which itself derives from Sanskrit कोश (*kośa*) with the same meaning.
+
 
 ## Features
 

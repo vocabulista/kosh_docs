@@ -1,5 +1,7 @@
+
 export default {
-    logo: <span>Kosh - APIs for Lexical Data</span>,
+    logoLink: 'https://github.com/cceh/kosh',
+    logo:  <span><img src="/kosh.png" width="30" height="30" alt="Logo" /> Kosh - APIs for Lexical Data</span>,
     project: {
       link: 'https://github.com/cceh/kosh'
     },

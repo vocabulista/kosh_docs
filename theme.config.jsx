@@ -3,5 +3,5 @@ export default {
     project: {
       link: 'https://github.com/cceh/kosh'
     },
-    docsRepositoryBase: 'https://github.com/vocabulista/kosh_docs/blob/main',
+    docsRepositoryBase: 'https://github.com/cceh/kosh_docs/blob/main',
   }

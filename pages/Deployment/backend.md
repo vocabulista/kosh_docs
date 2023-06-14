@@ -134,42 +134,10 @@ schema: de_alcedo_mapping.json
 
 ## Kosh Deployment
 
-Kosh can either be deployed natively on Unix-like systems or via Docker.
+Kosh can be implemented natively on Unix-like systems or through Docker. However, we strongly recommend deployment using Docker for the most efficient setup and management.
 
-Note: When deploying natively on Linux systems, Kosh offers a data synchronization feature. This ensures that any modification to a file in a data module prompts Kosh to update the index. Please note that this feature is currently unavailable for macOS.
+Keep in mind: When deployed natively on Linux systems, Kosh introduces a beneficial feature of data synchronization. With this feature, any changes made to a file within a data module trigger Kosh to automatically update the index. It's important to be aware, though, that this feature is not currently available on macOS platforms.
 
-### Deployment on Unix-like Systems
-
-Prerequisites:
-
-- Python version 3 or above
-- Elasticsearch version 7 or above
-
-Procedure:
-
-1. Clone the repository
-```bash
-$ git clone https://github.com/cceh/kosh
-```
-2. Navigate into the repository:
-```bash
-$ cd kosh
-```
-3. Build Kosh using the make command:
-```bash
-make
-```
-
-4. Run Kosh with appropriate command based on your operating system:
-
-    on Linux: 
-    ```bash
-    $ kosh --log_level DEBUG --data_root path_to_your_data_dir --data_host localhost
-    ```
-   on OSX:  
-   ```bash
-    $ kosh --log_level DEBUG --data_root path_to_your_data_dir --data_host localhost --data_sync off
-    ```
 
 ### With Docker
 
@@ -222,6 +190,41 @@ To check the logs:
 To stop and redeploy:
 
 `sudo docker-compose down`
+
+### On Unix-like Systems
+
+Prerequisites:
+
+- Python version 3 or above
+- Elasticsearch version 7 or above
+
+Procedure:
+
+1. Clone the repository
+```bash
+$ git clone https://github.com/cceh/kosh
+```
+2. Navigate into the repository:
+```bash
+$ cd kosh
+```
+3. Build Kosh using the make command:
+```bash
+make
+```
+
+4. Run Kosh with appropriate command based on your operating system:
+
+    on Linux: 
+    ```bash
+    $ kosh --log_level DEBUG --data_root path_to_your_data_dir --data_host localhost
+    ```
+   on OSX:  
+   ```bash
+    $ kosh --log_level DEBUG --data_root path_to_your_data_dir --data_host localhost --data_sync off
+    ```
+
+
 
 ## Sample datasets: [Kosh Data](/implementations/kosh_data.md)
 

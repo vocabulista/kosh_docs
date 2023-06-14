@@ -6,13 +6,18 @@ const FetchJson = ({base_url, collection}) => {
     const [dicts, setDicts] = useState({});
 
     useEffect(() => {
-        const url = `${base_url}/${collection}`;
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
+        const fetchData = async () => {
+            try {
+                const url = `${base_url}/${collection}`;
+                const response = await fetch(url, {cache: "force-cache"});
+                const data = await response.json();
                 setDicts(data.dicts);
-            })
-            .catch(error => console.error('Error:', error));
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        fetchData();
     }, []);
 
     return (

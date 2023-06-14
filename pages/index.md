@@ -22,9 +22,19 @@ The name "Kosh" originates from the Hindi word for dictionary or lexicon, को
 - Two APIs, GraphQL and REST, provide access to the data stored in Elasticsearch.
 - Kosh can be deployed using Docker or natively on Unix-like systems.
 
-## How to run Kosh
+## How to Implement Kosh
 
-You can configure Kosh to create APIs for your XML-encoded lexical resource. Learn how to do it for your own resources in the [deployment guide](deployment.md)
+Kosh enables you to design APIs customized for your XML-encoded lexical resources.
+
+Each component of Kosh, the backend and frontend, is independent and requires its own setup and deployment process. 
+
+### Backend Deployment
+
+For the deployment of Kosh's backend component, you are advised to follow the instructions detailed in our specific guide. Access the [Backend Deployment Guide](Deployment/backend.md).
+
+### Frontend Deployment
+
+For deploying the frontend component, we have also prepared a standalone guide. You can find comprehensive directions in our [Frontend Deployment Guide](Deployment/frontend.md).
 
 ## References
 

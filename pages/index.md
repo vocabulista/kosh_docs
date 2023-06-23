@@ -30,11 +30,11 @@ Each component of Kosh, the backend and frontend, is independent and requires it
 
 ### Backend Deployment
 
-For the deployment of Kosh's backend component, you are advised to follow the instructions detailed in our specific guide. Access the [Backend Deployment Guide](Deployment/backend.md).
+For the deployment of Kosh's backend component, you are advised to follow the instructions detailed in our specific guide. Access the [Backend Deployment Guide](deployment/backend.md).
 
 ### Frontend Deployment
 
-For deploying the frontend component, we have also prepared a standalone guide. You can find comprehensive directions in our [Frontend Deployment Guide](Deployment/frontend.md).
+For deploying the frontend component, we have also prepared a standalone guide. You can find comprehensive directions in our [Frontend Deployment Guide](deployment/frontend.md).
 
 ## References
 

@@ -1,5 +1,7 @@
 {
     "index": "About Kosh",
     "apis": "API Access and Search",
-    "sync": "Data Synchronization"
+    "sync": "Data Synchronization", 
+    "deployment": "Deployment",
+    "implementations": "Implementations"
   }

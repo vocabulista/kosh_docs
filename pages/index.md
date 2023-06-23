@@ -9,7 +9,7 @@ The Kosh Suite is an API-centric, open-source framework designed to efficiently 
 The framework's backbone, [kosh](https://github.com/cceh/kosh), is designed with the capability to provide API access to any XML-encoded lexical dataset, independently of the underlying data model. 
 
 ### Frontend
-In conjunction with the backend, the frontend, [kosh_client](https://github.com/cceh/kosh), brings you a user-friendly interface, built using React. This web application simplifies the process of searching within the diverse and extensive datasets indexed by Kosh.
+In conjunction with the backend, the frontend, [kosh_client](https://github.com/cceh/kosh_client), brings you a user-friendly interface, built using React. This web application simplifies the process of searching within the diverse and extensive datasets indexed by Kosh.
 
 ### Why *Kosh*?
 

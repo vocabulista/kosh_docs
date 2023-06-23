@@ -10,8 +10,7 @@ A Kosh data module consists of:
 
 ### Lexical data in XML 
 You can add to Kosh **any valid XML** file. The following entry belongs to the the Basque dictionary Hiztegi Batua.
-This dictionary has been compiled by the Academy of the Basque Language, Euzkaltzaindia. It is available in 
-[PDF](http://www.euskaltzaindia.eus/dok/eaeb/hiztegibatua/hiztegibatua.pdf) and in [XML](http://www.euskaltzaindia.eus/dok/eaeb/hiztegibatua/hiztegibatua.xml) format. 
+This dictionary has been compiled by the Academy of the Basque Language, Euzkaltzaindia. 
 You can also access it at [Kosh Data](implementations/kosh_data.md)
 
 ```xml
@@ -47,11 +46,11 @@ Kosh leverages XPath 1.0 notation to specify information about XML nodes and the
 
 **Specifying XML Nodes and Subnodes**
 
-To define the XML nodes and their subnodes to be indexed, you need to create a JSON configuration file. In this file, you will utilize XPath 1.0 notation to specify the desired nodes and subnodes. By using XPath expressions, you can precisely identify the XML elements for indexing.
+To define the XML nodes and their subnodes to be indexed, you need to create a JSON configuration file. In this file, you use the XPath 1.0 notation to specify the desired nodes and subnodes. By using XPath expressions, you can precisely identify the XML elements for indexing.
 
 **Indexing Arrays of Elements**
 
-Elasticsearch inherently supports indexing arrays of elements. When using Kosh, it is important to inform both Kosh and Elasticsearch about array indexing. To do so, you must modify the "fields" property in your JSON configuration file by enclosing the respective value in square brackets. For example, if the field you want to index is named `sense_def`, you should specify it as `[sense_def]` within the `fields` property.
+Elasticsearch inherently supports indexing arrays of elements. When deploying Kosh, it is important to inform both Kosh and Elasticsearch about array indexing. To do so, you must modify the `fields` property in your JSON configuration file by enclosing the respective value in square brackets. For example, if the field you want to index is named `sense_def`, you should specify it as `[sense_def]` within the `fields` property.
 
 **String Indexing Options**
 

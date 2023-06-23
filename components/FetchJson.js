@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import '../app/globals.css'
+import PropTypes from 'prop-types';
+import '../app/globals.css';
 
-
-const FetchJson = ({base_url, collection}) => {
+const FetchJson = ({ base_url, collection }) => {
     const [dicts, setDicts] = useState({});
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const url = `${base_url}/${collection}`;
-                const response = await fetch(url, {cache: "force-cache"});
+                const response = await fetch(url, { cache: 'force-cache' });
                 const data = await response.json();
                 setDicts(data.dicts);
             } catch (error) {
@@ -18,11 +18,10 @@ const FetchJson = ({base_url, collection}) => {
         };
 
         fetchData();
-    }, []);
+    }, [base_url, collection]);
 
     return (
         <div className="border border-gray-500">
-            
             <table className="table-auto w-full">
                 <thead>
                     <tr>
@@ -35,31 +34,38 @@ const FetchJson = ({base_url, collection}) => {
                 </thead>
                 <tbody>
                     {Object.keys(dicts).map((dictKey, index) => {
-                        const dict = dicts[dictKey];
+                        const { size, endpoints } = dicts[dictKey];
                         return (
                             <React.Fragment key={dictKey}>
                                 <tr>
                                     <td className="text-center border border-gray-500 px-4 py-2">{index + 1}</td>
-                                    <td className="text-center border border-gray-500 px-4 py-2">{dictKey}</td>
-                                    <td className="text-center border border-gray-500 px-4 py-2">{dict.size}</td>
                                     <td className="text-center border border-gray-500 px-4 py-2">
-                                        {dict.endpoints.graphql && (
-                                            <span
+                                        <span
                                             className="text-blue-500 underline cursor-pointer"
-                                                onClick={() =>
-                                                    window.open(`${base_url}${dict.endpoints.graphql}`)
-                                                }
-                                            >{`${base_url}${dict.endpoints.graphql}`}</span>
+                                            onClick={() => window.open(`${base_url}/${collection}/${dictKey}`)}
+                                        >
+                                            {dictKey}
+                                        </span>
+                                    </td>
+                                    <td className="text-center border border-gray-500 px-4 py-2">{size}</td>
+                                    <td className="text-center border border-gray-500 px-4 py-2">
+                                        {endpoints?.graphql && (
+                                            <span
+                                                className="text-blue-500 underline cursor-pointer"
+                                                onClick={() => window.open(`${base_url}${endpoints.graphql}`)}
+                                            >
+                                                {`${base_url}${endpoints.graphql}`}
+                                            </span>
                                         )}
                                     </td>
                                     <td className="border-b border-gray-500 px-4 py-2">
-                                        {dict.endpoints.graphql && (
+                                        {endpoints?.restful && (
                                             <span
-                                            className="text-blue-500 underline cursor-pointer"
-                                                onClick={() =>
-                                                    window.open(`${base_url}${dict.endpoints.restful}`)
-                                                }
-                                            >{`${base_url}${dict.endpoints.restful}`}</span>
+                                                className="text-blue-500 underline cursor-pointer"
+                                                onClick={() => window.open(`${base_url}${endpoints.restful}`)}
+                                            >
+                                                {`${base_url}${endpoints.restful}`}
+                                            </span>
                                         )}
                                     </td>
                                 </tr>
@@ -71,5 +77,9 @@ const FetchJson = ({base_url, collection}) => {
         </div>
     );
 }
-export default FetchJson;
 
+FetchJson.propTypes = {
+    base_url: PropTypes.string.isRequired,
+    collection: PropTypes.string.isRequired,
+};
+export default FetchJson;

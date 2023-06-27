@@ -131,6 +131,34 @@ files: ["alcedo-1.tei", "alcedo-2.tei", "alcedo-3.tei", "alcedo-4.tei", "alcedo-
 schema: de_alcedo_mapping.json
 ```
 
+#### Adding custom metadata
+
+Kosh allows you to add custom metadata to your data modules. This metadata will be indexed along with your data, allowing you to search for it. To add custom metadata, inside the '.kosh' file in your data module and add the metadata as follows:
+
+```
+[hoenig]
+files: ["hoenig.tei"]
+schema: hoenig_mapping.json
+title: "Wörterbuch der Kölner Mundart"
+authors: ["Fritz Hönig"]
+source_languages: ["ksh"]
+target_languages: ["deu"]
+
+```
+
+You can add more information, depending on your requirements. If you want to add multiple values for a specific metadata field, you can do so by separating them with a comma, within brackets:
+
+```
+source_languages: ["ksh", "deu"]
+```
+
+If you want to add a single value, you can do so without brackets:
+
+```
+title: "Wörterbuch der Kölner Mundart"
+```
+
+
 ## Kosh Deployment
 
 Kosh can be implemented natively on Unix-like systems or through Docker. However, we strongly recommend deployment using Docker for the most efficient setup and management.

@@ -131,7 +131,7 @@ files: ["alcedo-1.tei", "alcedo-2.tei", "alcedo-3.tei", "alcedo-4.tei", "alcedo-
 schema: de_alcedo_mapping.json
 ```
 
-#### Adding custom metadata
+#### Adding Custom Metadata
 
 Kosh allows you to add custom metadata to your data modules. This metadata will be indexed along with your data, allowing you to search for it. To add custom metadata, inside the '.kosh' file in your data module and add the metadata as follows:
 
@@ -146,16 +146,18 @@ target_languages: ["deu"]
 
 ```
 
-You can add more information, depending on your requirements. If you want to add multiple values for a specific metadata field, you can do so by separating them with a comma, within brackets:
+Kosh is flexible and adapts to your specific needs. Therefore, you can append as many metadata fields as necessary for your project.
+
+To insert multiple values into a particular metadata field, simply separate each value with a comma and enclose the list in square brackets. For example:
 
 ```
-source_languages: ["ksh", "deu"]
+source_languages: ["afr", "deu"]
 ```
 
 If you want to add a single value, you can do so without brackets:
 
 ```
-title: "Wörterbuch der Kölner Mundart"
+year: "1922"
 ```
 
 

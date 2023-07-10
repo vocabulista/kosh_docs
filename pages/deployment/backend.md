@@ -220,39 +220,11 @@ To stop and redeploy:
 
 `sudo docker-compose down`
 
-### On Unix-like Systems
+### With pip (pyproject.toml)
 
-Prerequisites:
+1. You must have `python = ">= 3.11"` installed.
 
-- Python version 3 or above
-- Elasticsearch version 7 or above
-
-Procedure:
-
-1. Clone the repository
-```bash
-$ git clone https://github.com/cceh/kosh
-```
-2. Navigate into the repository:
-```bash
-$ cd kosh
-```
-3. Build Kosh using the make command:
-```bash
-make
-```
-
-4. Run Kosh with appropriate command based on your operating system:
-
-    on Linux: 
-    ```bash
-    $ kosh --log_level DEBUG --data_root path_to_your_data_dir --data_host localhost
-    ```
-   on OSX:  
-   ```bash
-    $ kosh --log_level DEBUG --data_root path_to_your_data_dir --data_host localhost --data_sync off
-    ```
-
+2. Execute `pip install <path>/<to>/<kosh>`
 
 
 ## Sample datasets: [Kosh Data](/implementations/kosh_data.md)

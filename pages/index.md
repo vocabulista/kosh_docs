@@ -38,10 +38,15 @@ For deploying the frontend component, we have also prepared a standalone guide. 
 
 ## References
 
+Francisco Mondaca, Philip Schildkamp, Felix Rau and Luke Günther. 2023. 
+“The Kosh Suite: A Framework for Searching and Retrieving Lexical Data Using APIs.” 
+_In Electronic Lexicography in the 21st Century. Proceedings of the eLex 2023 Conference_, Brno, Czechia. 
+Brno: Lexical Computing CZ, s.r.o., 236-247. [PDF](https://elex.link/elex2023/wp-content/uploads/62.pdf)
+
 Francisco Mondaca, Philip Schildkamp, and Felix Rau. 2019. 
 “Introducing Kosh, a Framework for Creating and Maintaining APIs for Lexical Data.” 
 _In Electronic Lexicography in the 21st Century. Proceedings of the eLex 2019 Conference_, Sintra, Portugal. 
-Brno: Lexical Computing CZ, s.r.o., 907–21. [PDF](https://elex.link/elex2019/wp-content/uploads/2019/09/eLex_2019_51.pdf)
+Brno: Lexical Computing CZ, s.r.o., 907–921. [PDF](https://elex.link/elex2019/wp-content/uploads/2019/09/eLex_2019_51.pdf)
 
 Francisco Mondaca and Jan Bigalke. 2019. "Introducing an Open, Dynamic and Efficient Access for TEI-encoded Dictionaries on the Internet". 
 Presentation of a Kosh-based workflow for editing dictionaries and publish them via APIs. TEI Conference Graz 2019.

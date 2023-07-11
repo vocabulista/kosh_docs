@@ -115,6 +115,7 @@ To facilitate Kosh's interaction with your data, you're required to create a '.k
 - The location of your XML data.
 - The location of your configuration file.
 
+
 For instance, the '.kosh' file for  [hiztegibatua](https://github.com/cceh/kosh_data/blob/master/hiztegibatua/hiztegibatua.xml) would look like this:
 
 ```
@@ -123,6 +124,20 @@ files: ["hiztegibatua.xml"]
 schema: hiztegibatua_mapping.json
 ```
 
+#### Important Notice: Dataset Naming Guidelines
+
+To ensure consistency and ease of use, it is crucial to adhere to the following guidelines when naming your datasets. Please take note of the following:
+
+- Use ASCII letters: Limit dataset names to characters from a-z and A-Z. Avoid special characters or symbols.
+
+- Default to lowercase: It is strongly recommended to use lowercase letters as the default case for dataset names. This helps maintain uniformity and improves readability.
+
+- Underscores allowed: You may include underscores `_` within dataset names to enhance clarity or separate meaningful components. But please note that the use of underscores is not recommended.
+
+Example valid dataset names that conform to these guidelines include `H_N` and `H_n`. But we do recommend using lowercase letters and avoiding underscores, as in `hn`.
+
+
+#### Multiple Files
 In cases where your dictionary is split across multiple files, the '.kosh' file should list all files, as illustrated below:
 
 ```
